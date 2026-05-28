@@ -1,6 +1,6 @@
 from django.db import models
 
-//diario//
+"""diario"""
 class Diario(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     texto = models.TextField()
