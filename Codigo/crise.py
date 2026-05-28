@@ -1,6 +1,6 @@
 from django.db import models
 
-//crise//
+"""crise"""
 class Crise(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     data = models.DateTimeField(auto_now_add=True)
