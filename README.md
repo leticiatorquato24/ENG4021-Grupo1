@@ -66,29 +66,30 @@ O site é organizado em cinco áreas:
 ## Pesquisa e validação
 
 - [Resumo das entrevistas com usuários](Midia/resumo%20entrevistas.txt)
-- [Validação das 20 hipóteses](Documentos/Valida%C3%A7%C3%A3o%2020%20hip%C3%B3teses)
-- [Melhores ideias do brainstorm](Documentos/Melhores%20ideias%20do%20brainstorm.txt)
-- [Análise dos produtos similares](Documentos/An%C3%A1lise%20dos%20produtos%20similares.txt)
+- [Validação das 20 hipóteses](Documentos/01-Pesquisa%20e%20An%C3%A1lise/Valida%C3%A7%C3%A3o%2020%20hip%C3%B3teses)
+- [Melhores ideias do brainstorm](Documentos/02-Conceito%20e%20Estratégia/Melhores%20ideias%20do%20brainstorm.txt)
+- [Análise dos produtos similares](Documentos/01-Pesquisa%20e%20Análise/Análise%20dos%20produtos%20similares.txt)
 
 ---
 
 ## Design e identidade visual
 
-- [Definição da identidade visual](Documentos/Defini%C3%A7%C3%A3o%20da%20identidade%20visual)
+- [Definição da identidade visual](Documentos/04-Design%20e%20Identidade/Definição%20da%20identidade%20visual)
 - [Fluxograma de telas](Documentos/fluxograma)
-- [Diferencial do projeto](Documentos/diferencial)
-- [Origem e significado do nome Mindly](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Documentos/mindly.txt)
+- [Diferencial do projeto](Documentos/03-Requisitos%20Técnicos/fluxograma)
+- [Origem e significado do nome Mindly](Documentos/02-Conceito%20e%20Estratégia/mindly.txt)
 
 ---
 
 ## Documentação técnica
 
-- [Escopo técnico e viabilidade](Documentos/Escopo%20Tecnico%20Viabilidade.txt)
-- [Implementações diferenciais em relação aos concorrentes](Documentos/definirImplementacoes.txt)
-- [Impactos sociais negativos da aplicação](Documentos/Impactos%20Sociais%20Negativos%20da%20Aplicacao)
-- [Possibilidades de crescimento e ampliação](Documentos/Possibilidades%20de%20Crescimento%20e%20Ampliacao%20da%20Aplicacao)
-- [Estratégia para atrair usuários](https://github.com/brunomlima9/ENG4021-Grupo1/blob/main/estrategia_atrair_usuarios) _(aguardando merge)_
-- [Implementação da estratégia de atração de usuários](https://github.com/brunomlima9/ENG4021-Grupo1/blob/main/implementar_estrategia_atrair_usuarios) _(aguardando merge)_
+- [Escopo técnico e viabilidade](Documentos/03-Requisitos%20Técnicos/Escopo%20Tecnico%20Viabilidade.txt)
+- [Implementações diferenciais em relação aos concorrentes](Documentos/07-Funcionalidades/definirImplementacoes.txt)
+- [Impactos sociais negativos da aplicação](Documentos/06-Impacto%20Social/Impactos%20Sociais%20Negativos%20da%20Aplicacao)
+- [Possibilidades de crescimento e ampliação](Documentos/05-Estratégia%20de%20Crescimento/Possibilidades%20de%20Crescimento%20e%20Ampliacao%20da%20Aplicacao)
+- [Estratégia para atrair usuários](Documentos/05-Estratégia%20de%20Crescimento/estrategia_atrair_usuarios)
+- [Implementação da estratégia de atração de usuários](Documentos/05-Estratégia%20de%20Crescimento/implementar_estrategia_atrair_usuarios)
+- [Como rodar o projeto no Codespace](Documentos/08-Execucao%20do%20Projeto/Como%20rodar%20o%20projeto.txt)
 
 ---
 
@@ -98,9 +99,12 @@ O site é organizado em cinco áreas:
 
 - [views.py — home, diário, exercícios, dicas, notícias, crise](Codigo/core/views.py)
 - [urls.py — roteamento das páginas](Codigo/core/urls.py)
+- [urls.py - admin habilitado](Codigo/mindapp_project/urls.py)
 
 ### Templates HTML
 
+- [base.html](Codigo/core/templates/core/base.html)
+- [login.html](Codigo/core/templates/core/login.html)
 - [home.html](Codigo/core/templates/core/home.html)
 - [diario.html](Codigo/core/templates/core/diario.html)
 - [exercicios.html](Codigo/core/templates/core/exercicios.html)
@@ -114,12 +118,11 @@ O site é organizado em cinco áreas:
 
 ### Modelos de dados
 
-- [models — Notícia](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20noticia) _(aguardando merge)_
-- [models — Dica](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20dica) _(aguardando merge)_
-- [models — Exercício](https://github.com/gabiriva/ENG4021-Grupo1/blob/main/models%20exercicio) _(aguardando merge)_
-- [models — Usuário](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/usuarios.py) 
-- [models — Diário](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/diario.py) 
-- [models — Crise](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/crise.py) 
+- [models — Notícia](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py)
+- [models — Dica](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py)
+- [models — Exercício](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py)
+- [models — Diário](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py) 
+- [models — Crise](https://github.com/paitzaina/ENG4021-Grupo1/blob/main/Codigo/core/models.py) 
 
 ### Dependências e configuração
 
