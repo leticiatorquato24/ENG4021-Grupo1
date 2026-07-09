@@ -394,6 +394,35 @@ button {
   opacity: 0.88;
 }
 
+.ex-area-oculto {
+  display: none;
+}
+
+.ex-timer {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e4d72;
+  letter-spacing: 0.5px;
+}
+
+.ex-circle-pulsando {
+  animation: mindlyPulse 2s ease-in-out infinite;
+}
+
+@keyframes mindlyPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+.ex-circle-brilho {
+  animation: mindlyBrilho 3s ease-in-out infinite;
+}
+
+@keyframes mindlyBrilho {
+  0%, 100% { opacity: 1; box-shadow: 0 4px 14px rgba(91, 164, 207, 0.35); }
+  50% { opacity: 0.7; box-shadow: 0 4px 26px rgba(91, 164, 207, 0.6); }
+}
+
 /* ============================================================
    DICAS (dicas.html)
    ============================================================ */
@@ -475,6 +504,31 @@ button {
   font-size: 11px;
   color: #8ab4cc;
   margin-top: 2px;
+  line-height: 1.5;
+}
+
+.dica-card .dica-extra {
+  display: none;
+}
+
+.dica-card.dica-expandida .dica-extra {
+  display: inline;
+}
+
+.dica-chevron {
+  font-size: 12px;
+  color: #8ab4cc;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.dica-card.dica-expandida .dica-chevron {
+  transform: rotate(180deg);
+}
+
+.dica-card.dica-expandida {
+  background: #eaf4fb;
+  border-color: #5ba4cf;
 }
 
 /* ============================================================
@@ -570,6 +624,84 @@ button {
   font-size: 11px;
   color: #8ab4cc;
   margin-top: 5px;
+}
+.news-card-link {
+  display: block;
+}
+
+/* ============================================================
+   NOTICIA DETALHE (noticia_detalhe.html)
+   ============================================================ */
+
+.news-detail-hero {
+  background: linear-gradient(135deg, #5BA4CF, #3A86B4);
+  border-radius: 18px;
+  padding: 22px 20px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-detail-hero::after {
+  content: '';
+  position: absolute;
+  right: -24px;
+  top: -24px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.news-detail-hero .banner-tag {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 3px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.news-detail-hero .detail-title {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.news-detail-hero .detail-date {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 12px;
+}
+
+.news-detail-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #2C4A63;
+  margin-bottom: 24px;
+  white-space: pre-line;
+}
+
+.news-source-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #5BA4CF;
+  color: #FFFFFF;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.15s ease;
+  align-self: flex-start;
+}
+
+.news-source-btn:hover {
+  opacity: 0.88;
 }
 
 /* ============================================================
@@ -1055,4 +1187,103 @@ button {
   .crise-btn {
     max-width: 320px;
   }
+}
+
+/* ===== DIARIO interativo ===== */
+.diario-dates .date-item { text-decoration: none; }
+
+.diario-entrada {
+  background: #f5fafd;
+  border: 1px solid #c8e0ef;
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.diario-humor {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5ba4cf;
+  background: #e8f2fb;
+  border-radius: 8px;
+  padding: 3px 8px;
+  margin-bottom: 6px;
+}
+
+.diario-entrada-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.diario-salvar {
+  background: #5ba4cf;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.diario-excluir-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.diario-excluir {
+  background: none;
+  border: none;
+  color: #c0392b;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+.diario-vazio {
+  font-size: 13px;
+  color: #7a93a8;
+  text-align: center;
+  padding: 18px 0;
+}
+
+.diario-nova-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.diario-humor-input {
+  border: 1.5px solid #c8e0ef;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #1e4d72;
+}
+
+.sidebar-logout-form {
+  margin: 0;
+}
+
+button.sidebar-link {
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.auth-erro {
+  background: #fdecea;
+  color: #c0392b;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 16px;
 }
